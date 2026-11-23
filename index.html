@@ -77,10 +77,14 @@ tr:last-child td{border-bottom:none}
 .cmp td:first-child small{font-weight:400}
 .yes{color:var(--green);font-weight:700}.no{color:#ff7a7a;font-weight:700}
 .cmp-note{font-size:12.5px;color:var(--mut);margin-top:10px}
-.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:22px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:22px}
 .wc{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px}
 .wc.g{border-color:#4a3d18;background:linear-gradient(180deg,#1f1a0d,#141418)}
 .wc .ic{font-size:24px}
+.pf{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:6px 22px}
+.pf li{font-size:14px;color:var(--mut);padding:6px 0 6px 22px;position:relative;border-bottom:1px solid #1d1d23}
+.pf li b{color:var(--txt)}
+.pf li:before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
 .wc h3{font-size:17px;margin:8px 0 6px}
 .wc p{color:var(--mut);font-size:14px}
 .wc .vs{display:flex;gap:18px;margin:6px 0 4px;align-items:baseline}
@@ -236,8 +240,8 @@ footer b{color:var(--txt)}
 <section id="clara">
 <div class="sh"><div><h2>Jeeves vs. Clara</h2><p>Más que una tarjeta: una plataforma financiera completa, con respaldo internacional, sobre el mismo consumo del simulador (≈ <span id="cmpGasto">—</span>/mes).</p></div></div>
 <div class="why">
+<div class="wc" style="grid-column:1/-1"><div class="ic">🧩</div><h3>Un portafolio completo, no solo tarjetas</h3><p style="margin-bottom:10px">Todo en una sola plataforma y con un solo cupo:</p><ul class="pf"><li><b>Jeeves Cards</b> · tarjetas corporativas físicas y virtuales Mastercard (incluida World Elite), ilimitadas, hasta 37 días sin intereses.</li><li><b>Jeeves Pay</b> · pagos a proveedores nacionales con dispersión a cuentas, individuales o masivos, con aprobaciones.</li><li><b>Pagos cross-border e Instant Pay</b> · pagos internacionales a más de 150 países y 40 monedas; con stablecoins se liquidan en minutos.</li><li><b>Jeeves Cash</b> · cuentas multimoneda y conversión de divisas en tiempo real.</li><li><b>Gestión de gastos y viáticos</b> · política de viáticos cargada en la plataforma, aprobaciones, legalización y reportería en tiempo real.</li><li><b>Suite de agentes de IA</b> · legalización de gastos, auditoría de transacciones, conciliaciones contables y pagos con cualquier institución financiera.</li><li><b>Integración contable</b> · API sin costo o archivo con la estructura de su ERP.</li></ul></div>
 <div class="wc g"><div class="ic">🌎</div><h3>Compañía estadounidense, presencia global</h3><div class="vs"><b>26</b><span>países<br>Jeeves</span><i>vs 3</i><span>países<br>Clara</span></div><p>Respaldo, cumplimiento y escala de una compañía con sede en EE. UU.</p></div>
-<div class="wc"><div class="ic">🧩</div><h3>Un portafolio, no solo tarjetas</h3><p>Tarjetas corporativas, pagos a proveedores nacionales con dispersión a cuentas, pagos cross-border y la nueva suite de agentes de IA, en una sola plataforma y un solo cupo.</p></div>
 <div class="wc"><div class="ic">🤖</div><h3>Agentes de IA para la operación</h3><p>Optimizan cualquier proceso que hoy les genera carga operativa: legalización de gastos, conciliaciones contables y pagos con cualquier institución financiera.</p></div>
 <div class="wc"><div class="ic">🔗</div><h3>Conciliación por 2 vías</h3><p>API sin costo para su equipo de TI, o tomamos una sola vez la estructura de su ERP y entregamos el archivo listo para cargar.</p></div>
 </div>
@@ -249,18 +253,19 @@ footer b{color:var(--txt)}
 <tr><td>Diferencia a favor con Jeeves</td><td colspan="2" style="text-align:center"><b class="gold" id="cbDiff" style="font-size:20px">—</b></td></tr>
 <tr><td>Tiempo para igualar el cashback de Jeeves<br><small>Lo que Jeeves devuelve en sus primeros 6 meses</small></td><td><b class="gold" style="font-size:18px">6 meses</b><br><small>al 1%</small></td><td><b id="cbMeses" style="font-size:18px">—</b><br><small id="cbAnos">—</small></td></tr>
 <tr><td>Exención del 4x1000 y plazo<br><small>Pagos con tarjeta</small></td><td><span class="yes">✓</span><br><small>Hasta 37 días sin intereses, sin 4x1000</small></td><td><small>Plazo similar</small></td></tr>
-<tr><td>Legalización de gastos con agente de IA<br><small>Recibe el soporte, lo cruza con la transacción y extrae los datos</small></td><td><span class="yes">✓</span><br><small>Por WhatsApp, apenas ocurre la compra</small></td><td><small>OCR para conciliación</small></td></tr>
+<tr><td>Legalización de gastos con agente de IA<br><small>Recibe el soporte, lo cruza con la transacción y extrae los datos</small></td><td><span class="yes">✓</span><br><small>Por WhatsApp, apenas ocurre la compra</small></td><td>—</td></tr>
 <tr><td>Agentes de IA que auditan el gasto<br><small>Transacciones sin soporte, inconsistencias y políticas</small></td><td><span class="yes">✓</span></td><td>—</td></tr>
 <tr><td>Integración con el ERP</td><td><span class="yes">✓ 2 vías</span><br><small>API sin costo o archivo con su estructura (cuentas GL, centros de costo)</small></td><td><small>Conectores nativos: la empresa se acomoda a los campos del proveedor</small></td></tr>
 <tr><td>Pago a proveedores nacionales<br><small>Dispersión a cuentas, individual o masiva (hasta 300), con aprobaciones</small></td><td><span class="yes">✓ Jeeves Pay</span><br><small>Desde el mismo cupo</small></td><td><span class="no">✗</span><br><small>Solo pagos con tarjeta</small></td></tr>
-<tr><td>Pagos cross-border</td><td><span class="yes">✓</span><br><small>Proveedores internacionales en menos de 24 h</small></td><td>—</td></tr>
+<tr><td>Pagos cross-border<br><small>Proveedores internacionales</small></td><td><span class="yes">✓</span><br><small>Más de 150 países y 40 monedas · con Instant Pay (stablecoins) se liquidan en minutos, frente a 24–48 h por SWIFT</small></td><td>—</td></tr>
 <tr><td>Tipos de límite por tarjeta</td><td><span class="yes">✓</span><br><small>Diario, semanal, mensual y de por vida</small></td><td>Diario y mensual</td></tr>
 <tr><td>Control por categoría y comercio</td><td><span class="yes">✓</span><br><small>Habilitar o bloquear categorías, o limitar a un comercio</small></td><td>Bloqueo de categorías</td></tr>
-<tr><td>Viáticos sin anticipos<br><small>Política de viajes cargada, solicitud y aprobación</small></td><td><span class="yes">✓</span><br><small>Tarjeta virtual activa solo en las fechas del viaje</small></td><td><small>Tarjetas virtuales para reservas</small></td></tr>
+<tr><td>Política de viáticos cargada en Jeeves<br><small>Topes por cargo, destino y categoría</small></td><td><span class="yes">✓</span><br><small>Controla cada gasto contra la política e identifica lo que cumple y lo que no</small></td><td>—</td></tr>
+<tr><td>Viáticos sin anticipos<br><small>Solicitud, aprobación y presupuesto según la política</small></td><td><span class="yes">✓</span><br><small>Tarjeta virtual activa solo en las fechas del viaje</small></td><td><small>Tarjetas virtuales para reservas</small></td></tr>
 <tr><td>Tarjetas físicas y virtuales</td><td><span class="yes">✓</span><br><small>Creación masiva · virtuales ilimitadas en Apple Pay / Google Pay</small></td><td><span class="yes">✓</span></td></tr>
 <tr><td>Modelo de precio</td><td><span class="yes">✓ Todo incluido</span><br><small>Un fee anual, sin cuota de manejo ni costo por tarjeta</small></td><td><small>Módulos adicionales con costo</small></td></tr>
 </table></div>
-<div class="cmp-note">Cashback de Clara calculado al <span class="cPct">0,10%</span> sobre 12 meses del mismo consumo (editable en "Ver cálculos y supuestos"). Cashback de Jeeves: 1% durante los primeros 6 meses. Información de Clara según lo reportado por otros clientes y su información pública; puede variar según su propuesta.</div>
+<div class="cmp-note">Cashback de Clara calculado al <span class="cPct">0,10%</span> sobre 12 meses del mismo consumo (editable en "Ver cálculos y supuestos"). Cashback de Jeeves: 1% durante los primeros 6 meses. Pagos con Instant Pay sujetos a disponibilidad del corredor y validación regulatoria. Información de Clara según lo reportado por otros clientes y su información pública; puede variar según su propuesta.</div>
 </section>
 
 <section id="conciliacion">
@@ -269,8 +274,9 @@ footer b{color:var(--txt)}
 <div class="st"><b>1</b><h4>Compra con la tarjeta</h4><p>El colaborador paga con su tarjeta física o virtual, dentro de los límites y categorías definidos.</p></div>
 <div class="st"><b>2</b><h4>El agente de IA pide el soporte</h4><p>Por WhatsApp, apenas ocurre la compra, solicita la foto del recibo o factura y el motivo del gasto.</p></div>
 <div class="st"><b>3</b><h4>Cruza y extrae</h4><p>Identifica la transacción, confirma que el soporte corresponde y extrae NIT, valor, IVA y fecha.</p></div>
-<div class="st"><b>4</b><h4>Listo para legalizar</h4><p>El gasto queda clasificado con su cuenta GL y centro de costo; los agentes señalan lo que falta o no cuadra.</p></div>
+<div class="st"><b>4</b><h4>Listo para legalizar</h4><p>El gasto queda clasificado con su cuenta GL y centro de costo, validado contra la política; los agentes señalan lo que no cumple, falta o no cuadra.</p></div>
 </div>
+<div class="wc g" style="margin-top:16px"><div class="ic">🧳</div><h3>Política de viáticos cargada en Jeeves</h3><p>Cargamos su política de viáticos y gastos en la plataforma: topes por cargo, destino, tipo de gasto y número de días. Desde ahí, Jeeves controla cada transacción contra la política, identifica automáticamente lo que cumple y lo que no cumple, y alerta a finanzas antes de legalizar. Para cada viaje, el colaborador solicita, se aprueba el presupuesto calculado con la política y la tarjeta queda activa solo en las fechas autorizadas, sin anticipos en efectivo.</p></div>
 <div class="two" style="margin-top:16px">
 <div class="wc"><div class="ic">🔌</div><h3>Vía 1 · API para su equipo de TI</h3><p>Entregamos la API sin costo para que su equipo integre Jeeves con el ERP a su medida: transacciones, soportes y clasificación contable en tiempo real.</p></div>
 <div class="wc"><div class="ic">📄</div><h3>Vía 2 · Archivo con la estructura de su ERP</h3><p>Tomamos una sola vez la estructura de su ERP y enlazamos cuentas GL, centros de costo, terceros y demás campos. Desde ahí, Jeeves genera el archivo exactamente como lo recibe su ERP.</p></div>
@@ -281,25 +287,24 @@ footer b{color:var(--txt)}
 <tr><th>Fecha</th><th>Tarjeta · Usuario</th><th>Comercio</th><th>NIT</th><th>Valor COP</th><th>IVA</th><th>Cuenta GL</th><th>Centro de costo</th><th>Soporte</th></tr>
 <tr><td>2026-11-18</td><td>•• 4821 · Comercial</td><td>Hotel Bogotá</td><td>900.123.456-7</td><td>620.000</td><td>99.000</td><td>519525 Viáticos</td><td>CC-110 Comercial</td><td class="green">✓ Factura</td></tr>
 <tr><td>2026-11-19</td><td>•• 7730 · Tesorería</td><td>Proveedor software</td><td>901.555.210-3</td><td>4.350.000</td><td>694.538</td><td>513595 Servicios</td><td>CC-200 TI</td><td class="green">✓ Factura</td></tr>
-<tr><td>2026-11-20</td><td>•• 1192 · Operaciones</td><td>Restaurante</td><td>800.987.654-1</td><td>185.000</td><td>13.704</td><td>519530 Representación</td><td>CC-310 Operaciones</td><td class="gold">⚠ Falta soporte</td></tr>
+<tr><td>2026-11-20</td><td>•• 1192 · Operaciones</td><td>Restaurante</td><td>800.987.654-1</td><td>185.000</td><td>13.704</td><td>519530 Representación</td><td>CC-310 Operaciones</td><td class="gold">⚠ Fuera de política</td></tr>
 </table></div>
 <div class="cap">Ejemplo ilustrativo. Las columnas se ajustan a la estructura contable de Toyota Financial Services.</div>
 </div>
 </section>
 
 <section id="videos">
-<div class="sh"><div><h2>Véalo en acción</h2><p>Videos cortos sobre lo que conversamos: la plataforma, la captura y legalización de gastos, viáticos y pagos a proveedores.</p></div></div>
+<div class="sh"><div><h2>Véalo en acción</h2><p>Videos cortos sobre lo que conversamos: la plataforma, la legalización de gastos, viáticos y pagos a proveedores.</p></div></div>
 <div class="hub">
-<div><h3>🎬 Aprende con Jeeves · toda la plataforma en video</h3><p>Tutoriales paso a paso: crear tarjetas, invitar al equipo, el asistente de IA y las herramientas de contabilidad (Colombia · español).</p></div>
-<a class="btn" href="https://welcome-jeeves.jeeves-8317.chatgpt.site/" target="_blank" rel="noopener">Ver todos los videos ↗</a>
+<div><h3>🎬 Conoce la plataforma · Demo</h3><p><b style="color:var(--txt)">Conoce a Jeeves, paso a paso:</b> tutoriales para crear tarjetas, invitar al equipo, usar el asistente de IA y las herramientas de contabilidad (Colombia · español).</p></div>
+<a class="btn" href="https://welcome-jeeves.jeeves-8317.chatgpt.site/" target="_blank" rel="noopener">Conoce a Jeeves ↗</a>
 </div>
 <div class="vids">
-<div class="vc"><div class="vf" data-v="ol8S1W9aeas"><img src="https://i.ytimg.com/vi/ol8S1W9aeas/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Demo de la plataforma</span><h3>Tarjetas empresariales en Colombia: guía de la plataforma</h3><p>Recorrido completo: tarjetas, límites, aprobaciones y reportes.</p></div></div>
-<div class="vc"><div class="vf" data-v="Zx42DFlmxSE"><img src="https://i.ytimg.com/vi/Zx42DFlmxSE/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Captura y legalización</span><h3>Control de gastos: tutorial de la plataforma</h3><p>Cómo se capturan los soportes y se controla cada gasto.</p></div></div>
+<div class="vc"><div class="vf" data-v="ol8S1W9aeas"><img src="https://i.ytimg.com/vi/ol8S1W9aeas/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Demo · Captura y legalización</span><h3>Guía de la plataforma Jeeves en Colombia</h3><p>Recorrido completo: tarjetas, saldo y transacciones con soportes faltantes, Jeeves Pay, equipos, integración contable y políticas de aprobación.</p></div></div>
 <div class="vc"><div class="vf" data-v="Fgnr3yAzhYc"><img src="https://i.ytimg.com/vi/Fgnr3yAzhYc/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Soportes y facturas</span><h3>Facturas de todos los gastos en un solo lugar</h3><p>Caso H&amp;M: soportes centralizados para la conciliación.</p></div></div>
-<div class="vc"><div class="vf" data-v="7UWUcoUYvxk"><img src="https://i.ytimg.com/vi/7UWUcoUYvxk/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Viáticos</span><h3>Gastos de viaje con tarjeta corporativa</h3><p>Viáticos sin anticipos, con política y aprobación.</p></div></div>
+<div class="vc"><div class="vf" data-v="R1sPPtjGIBQ"><img src="https://i.ytimg.com/vi/R1sPPtjGIBQ/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Viáticos</span><h3>Viáticos legalizados en el momento de la compra</h3><p>Caso Burger King: cada viajero paga con su tarjeta, sube la foto de la factura y la legalización queda hecha; finanzas ve el gasto casi en tiempo real.</p></div></div>
 <div class="vc"><div class="vf" data-v="UMaLnLz2isE"><img src="https://i.ytimg.com/vi/UMaLnLz2isE/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Proveedores nacionales</span><h3>Pago a proveedores en tiempo real en Colombia</h3><p>Jeeves Pay: dispersión a cuentas desde el mismo cupo.</p></div></div>
-<div class="vc"><div class="vf" data-v="8dbq--o7Yv8"><img src="https://i.ytimg.com/vi/8dbq--o7Yv8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Cross-border</span><h3>Proveedores internacionales en menos de 24 h</h3><p>Pagos internacionales más rápidos y económicos.</p></div></div>
+<div class="vc"><div class="vf" data-v="8dbq--o7Yv8"><img src="https://i.ytimg.com/vi/8dbq--o7Yv8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Cross-border</span><h3>Pagos internacionales con Jeeves Pay</h3><p>Caso Moons: transferencias internacionales más rápidas y económicas que con su banco tradicional.</p></div></div>
 <div class="vc"><div class="vf" data-v="aDBybQsWovc"><img src="https://i.ytimg.com/vi/aDBybQsWovc/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><div class="vb"><span class="tag">Credenciales</span><h3>Por qué los CFO eligen Jeeves</h3><p>Lo que dicen los equipos financieros que ya trabajan con Jeeves.</p></div></div>
 </div>
 </section>
@@ -311,6 +316,7 @@ footer b{color:var(--txt)}
 <tr><td>Tarjetas</td><td>Tarjetas de crédito de Bancolombia; ≈14 tarjetas que pueden llegar a 20 (3–4 de COP 30M, 9 de COP 10M y montos variables).</td><td>Tarjetas físicas y virtuales con límites por tarjeta, categoría y comercio, creadas en minutos desde la plataforma.</td></tr>
 <tr><td>Legalización de gastos</td><td>No existe un proceso de legalización.</td><td>Agente de IA que pide el soporte por WhatsApp, lo cruza con la transacción y deja el gasto listo para legalizar.</td></tr>
 <tr><td>Conciliación y ERP</td><td>Captura manual de soportes para conciliar.</td><td>API sin costo o archivo con la estructura de su ERP (cuentas GL, centros de costo), listo para cargar.</td></tr>
+<tr><td>Viáticos y política</td><td>Sin una política de viáticos controlada desde una plataforma.</td><td>Política de viáticos cargada en Jeeves: cada gasto se valida y se identifica lo que cumple y lo que no.</td></tr>
 <tr><td>Costo financiero</td><td>4x1000 en los pagos y sin beneficio por el consumo.</td><td>Exención del 4x1000 en tarjetas, hasta 37 días sin intereses y 1% de cashback los primeros 6 meses.</td></tr>
 </table></div>
 </section>
@@ -326,6 +332,7 @@ footer b{color:var(--txt)}
 <li>Tarjetas físicas y virtuales · creación masiva</li>
 <li>Límites diarios, semanales, mensuales y de por vida</li>
 <li>Agente de IA para legalización de gastos</li>
+<li>Política de viáticos cargada y control de cumplimiento</li>
 <li>Conciliación por API o archivo con la estructura de su ERP</li>
 <li>Jeeves Pay · pagos a proveedores con dispersión a cuentas</li>
 </ul>
